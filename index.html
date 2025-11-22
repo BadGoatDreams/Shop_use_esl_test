@@ -174,12 +174,12 @@
         },
         {
             mission: "🎂 Baking a Birthday Cake",
-            list: ["🥡 Flour & Sugar (Grocer)", "🥚 Eggs (Grocer)", "🥧 Pie Dish (Hardware)", "🕯️ Candles (Grocer)"],
+            list: ["🥡 Flour (Discount Grocer)", "🥚 Eggs (Discount Grocer)", "🥧 Pie Dish (Hardware)", "🕯️ Candles (Discount Grocer)"],
             budget: 35
         },
         {
             mission: "🌭 Backyard BBQ",
-            list: ["🌭 Sausages (Butcher)", "🍞 Buns (Baker)", "🍅 Ketchup (Grocer)", "🥤 Soda (Grocer)"],
+            list: ["🌭 Sausages (Butcher)", "🍞 Burger Buns (Baker)", "🍅 Ketchup (Grocer)", "🥤 Soda (Grocer)"],
             budget: 50
         },
         {
@@ -189,19 +189,19 @@
         },
         {
             mission: "🍳 Breakfast in Bed",
-            list: ["🥓 Bacon (Butcher)", "🥚 Eggs (Grocer)", "🥐 Croissant (Baker)", "☕ Coffee (Cafe)"],
+            list: ["🥓 Bacon (Butcher)", "🥚 Eggs (Discount Grocer)", "🥐 Croissant (Baker)", "☕ Coffee (Cafe)"],
             budget: 45
         },
 
         // --- HOUSE & HOME ---
         {
             mission: "🛠️ Fix a Broken Shelf",
-            list: ["🔨 Hammer (Hardware)", "🔩 Nails (Hardware)", "🩹 Bandages (Pharmacy)", "🥤 Cold Drink (Cafe)"],
+            list: ["🔨 Hammer (Hardware)", "🔩 Nails (Hardware)", "🩹 Bandages (Pharmacy)", "🥤 Cold Soda (Grocer)"],
             budget: 40
         },
         {
             mission: "🎨 Painting the Bedroom",
-            list: ["🎨 Paint (Hardware)", "👕 Old T-Shirt (Clothing)", "🥪 Lunch Sandwich (Cafe)", "🪜 Step Ladder (Hardware)"],
+            list: ["🎨 Paint (Hardware)", "👕 Old T-Shirt (Clothing)", "🥪 Sandwich (Cafe)", "🪜 Step Ladder (Hardware)"],
             budget: 85
         },
         {
@@ -228,7 +228,7 @@
         },
         {
             mission: "🏖️ Going to the Beach",
-            list: ["🕶️ Sunglasses (Clothing)", "👒 Hat (Clothing)", "🍦 Ice Cream/Snack (Cafe)", "📰 Magazine (Newsstand)"],
+            list: ["🕶️ Sunglasses (Clothing)", "👒 Hat (Clothing)", "🍦 Ice Cream (Cafe)", "📰 Magazine (Newsstand)"],
             budget: 50
         },
         {
@@ -281,27 +281,44 @@
         {
             name: "🍎 Main St. Grocer",
             personality: "Friendly and chatty! 😄 Ask about the weather.",
-            items: { "🍎 Apples": "$2/lb", "🥔 Potatoes": "$3/bag", "🥛 Milk": "$4", "🥫 Soup": "$2" }
+            items: { 
+                "🍎 Apples": "$2/lb", "🥔 Potatoes": "$3/bag", "🥛 Milk": "$4", "🥫 Soup": "$2", 
+                "🍷 Wine": "$12", "🍅 Ketchup": "$3", "🥤 Soda": "$2", "🧀 Cheese": "$6",
+                "🗑️ Trash Bags": "$5", "🧊 Ice Pack": "$3", "💧 Water Bottle": "$2"
+            }
         },
         {
             name: "🏷️ Discount Grocer",
             personality: "Grumpy 😠. In a rush. Wants cash only!",
-            items: { "🍏 Old Apples": "$1/lb", "🥚 Eggs": "$2", "🥡 Flour": "$3", "🍪 Snacks": "$1" }
+            items: { 
+                "🍏 Old Apples": "$1/lb", "🥚 Eggs": "$2", "🥡 Flour": "$3", "🍪 Snacks": "$1",
+                "🕯️ Candles": "$4", "🍜 Instant Noodles": "$1"
+            }
         },
         {
             name: "🥩 The Butcher",
             personality: "Loud! 📢 Shouts about how fresh the meat is!",
-            items: { "🥩 Steak": "$15", "🍗 Chicken": "$10", "🌭 Sausages": "$8", "🍖 Ham": "$12" }
+            items: { 
+                "🥩 Steak": "$15", "🍗 Chicken": "$10", "🌭 Sausages": "$8", "🍖 Ham": "$12",
+                "🥓 Bacon": "$9", "🥩 Dried Meat": "$8", "🍖 Bones": "$3"
+            }
         },
         {
             name: "🥖 The Baker",
             personality: "Sweet and motherly 👵. Offers free smells.",
-            items: { "🍞 Bread Loaf": "$4", "🥐 Croissant": "$3", "🥧 Pie": "$10", "🧁 Muffins": "$2" }
+            items: { 
+                "🍞 Bread Loaf": "$4", "🥐 Croissant": "$3", "🥧 Pie": "$10", "🧁 Muffins": "$2",
+                "🍔 Burger Buns": "$4", "🥖 Baguette": "$3", "🍩 Donut": "$2"
+            }
         },
         {
             name: "🔨 Hardware Store",
             personality: "Knowledgeable 🤓 but speaks very slowly.",
-            items: { "🔨 Hammer": "$12", "🔩 Nails": "$5", "🧤 Gloves": "$8", "🎨 Paint": "$20" }
+            items: { 
+                "🔨 Hammer": "$12", "🔩 Nails": "$5", "🧤 Gloves": "$8", "🎨 Paint": "$20",
+                "🥧 Pie Dish": "$8", "🪜 Step Ladder": "$25", "🔦 Flashlight": "$10", "🔋 Batteries": "$6",
+                "🛠️ Wrench": "$9", "🧹 Cleaning Supplies": "$12"
+            }
         },
         {
             name: "🔧 The Mechanic",
@@ -311,22 +328,35 @@
         {
             name: "👗 Clothing Boutique",
             personality: "Very posh 💅. Thinks everyone has bad fashion.",
-            items: { "🕶️ Sunglasses": "$15", "👒 Hat": "$20", "🧣 Scarf": "$12", "👕 T-Shirt": "$25" }
+            items: { 
+                "🕶️ Sunglasses": "$15", "👒 Hat": "$20", "🧣 Scarf": "$12", "👕 T-Shirt": "$25",
+                "🧥 Warm Jacket": "$35", "🎒 Backpack": "$20", "👢 Sturdy Boots": "$40"
+            }
         },
         {
             name: "💊 Pharmacy",
             personality: "Professional and serious 🧐. Whispers.",
-            items: { "🧪 Cough Syrup": "$8", "💊 Vitamins": "$12", "🤕 Bandages": "$4", "🌡️ Medicine": "$10" }
+            items: { 
+                "🧪 Cough Syrup": "$8", "💊 Vitamins": "$12", "🤕 Bandages": "$4", "🌡️ Medicine": "$10",
+                "🧼 Soap": "$3", "🍬 Breath Mints": "$2", "💊 Painkillers": "$8", "💊 Bug Spray": "$7",
+                "💊 Antibiotics": "$15", "📸 Camera Film": "$10"
+            }
         },
         {
             name: "📰 Newsstand",
             personality: "Reads the paper while talking to you. Distracted 😒.",
-            items: { "📰 Newspaper": "$2", "📖 Magazine": "$5", "🍫 Candy Bar": "$1", "🗺️ Map": "$4" }
+            items: { 
+                "📰 Newspaper": "$2", "📖 Magazine": "$5", "🍫 Candy Bar": "$1", "🗺️ Map": "$4",
+                "🍫 Energy Bar": "$3", "🗺️ Trail Map": "$6", "🎾 Tennis Ball": "$3"
+            }
         },
         {
             name: "☕ Cafe Owner",
             personality: "Energetic! ⚡ Runs around. High on caffeine.",
-            items: { "☕ Coffee": "$3", "🥪 Sandwich": "$8", "🍵 Tea": "$2", "🍰 Cake Slice": "$4" }
+            items: { 
+                "☕ Coffee": "$3", "🥪 Sandwich": "$8", "🍵 Tea": "$2", "🍰 Cake Slice": "$4",
+                "🍦 Ice Cream": "$4", "☕ Espresso": "$3"
+            }
         }
     ];
 
@@ -410,5 +440,4 @@
 </script>
 
 </body>
-
 </html>
