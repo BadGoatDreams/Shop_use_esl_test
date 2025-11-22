@@ -166,30 +166,114 @@
 <script>
     // --- DATA ---
     const buyers = [
+        // --- FOOD & PARTIES ---
         {
             mission: "🍽️ Host a Fancy Dinner Party",
-            list: ["🥩 Steak (Butcher)", "🥔 Potatoes (Grocer)", "🍷 Wine (General/Liquor)", "💐 Flowers (Florist)"],
-            budget: 60
-        },
-        {
-            mission: "🛠️ Fix up the House",
-            list: ["🔨 Hammer (Hardware)", "🔩 Nails (Hardware)", "🥪 Lunch Sandwich (Cafe)", "🧤 Work Gloves (Hardware)"],
-            budget: 45
-        },
-        {
-            mission: "🤒 Help a Sick Relative",
-            list: ["💊 Medicine (Pharmacy)", "🥫 Soup (Grocer)", "📰 Magazine (Newsstand)", "🛌 Blanket (General Store)"],
-            budget: 40
-        },
-        {
-            mission: "🚗 Prepare for a Road Trip",
-            list: ["🛢️ Oil Change (Mechanic)", "🗺️ Map (Newsstand)", "🍎 Snacks (Grocer)", "🕶️ Sunglasses (Clothing)"],
-            budget: 80
+            list: ["🥩 Steak (Butcher)", "🥔 Potatoes (Grocer)", "🍷 Wine (Grocer)", "🥖 Bread (Baker)"],
+            budget: 65
         },
         {
             mission: "🎂 Baking a Birthday Cake",
-            list: ["🥡 Flour & Sugar (Grocer)", "🥚 Eggs (Grocer)", "🕯️ Candles (General Store)", "🎈 Decoration (Florist)"],
+            list: ["🥡 Flour & Sugar (Grocer)", "🥚 Eggs (Grocer)", "🥧 Pie Dish (Hardware)", "🕯️ Candles (Grocer)"],
+            budget: 35
+        },
+        {
+            mission: "🌭 Backyard BBQ",
+            list: ["🌭 Sausages (Butcher)", "🍞 Buns (Baker)", "🍅 Ketchup (Grocer)", "🥤 Soda (Grocer)"],
+            budget: 50
+        },
+        {
+            mission: "🥪 Picnic in the Park",
+            list: ["🥖 Baguette (Baker)", "🧀 Cheese (Grocer)", "🍖 Ham (Butcher)", "🍎 Apples (Grocer)"],
+            budget: 40
+        },
+        {
+            mission: "🍳 Breakfast in Bed",
+            list: ["🥓 Bacon (Butcher)", "🥚 Eggs (Grocer)", "🥐 Croissant (Baker)", "☕ Coffee (Cafe)"],
+            budget: 45
+        },
+
+        // --- HOUSE & HOME ---
+        {
+            mission: "🛠️ Fix a Broken Shelf",
+            list: ["🔨 Hammer (Hardware)", "🔩 Nails (Hardware)", "🩹 Bandages (Pharmacy)", "🥤 Cold Drink (Cafe)"],
+            budget: 40
+        },
+        {
+            mission: "🎨 Painting the Bedroom",
+            list: ["🎨 Paint (Hardware)", "👕 Old T-Shirt (Clothing)", "🥪 Lunch Sandwich (Cafe)", "🪜 Step Ladder (Hardware)"],
+            budget: 85
+        },
+        {
+            mission: "🌷 Spring Cleaning",
+            list: ["🧤 Rubber Gloves (Hardware)", "🧼 Soap (Pharmacy)", "🗑️ Trash Bags (Grocer)", "🧣 Head Scarf (Clothing)"],
+            budget: 35
+        },
+        {
+            mission: "💡 Power Outage Prep",
+            list: ["🔦 Flashlight (Hardware)", "🥫 Canned Soup (Grocer)", "🧥 Warm Jacket (Clothing)", "🔋 Batteries (Hardware)"],
+            budget: 60
+        },
+
+        // --- HEALTH & PERSONAL ---
+        {
+            mission: "🤒 Sick Day at Home",
+            list: ["🧪 Cough Syrup (Pharmacy)", "🍵 Hot Tea (Cafe)", "🥣 Soup (Grocer)", "📰 Magazine (Newsstand)"],
+            budget: 40
+        },
+        {
+            mission: "💼 Job Interview Prep",
+            list: ["👔 Nice Shirt (Clothing)", "📰 Newspaper (Newsstand)", "🍬 Breath Mints (Pharmacy)", "☕ Coffee (Cafe)"],
+            budget: 55
+        },
+        {
+            mission: "🏖️ Going to the Beach",
+            list: ["🕶️ Sunglasses (Clothing)", "👒 Hat (Clothing)", "🍦 Ice Cream/Snack (Cafe)", "📰 Magazine (Newsstand)"],
+            budget: 50
+        },
+        {
+            mission: "🤕 Minor Accident",
+            list: ["🩹 Bandages (Pharmacy)", "💊 Painkillers (Pharmacy)", "🍫 Chocolate (Newsstand)", "🧊 Ice Pack (Grocer)"],
             budget: 30
+        },
+
+        // --- TRAVEL & ACTIVITY ---
+        {
+            mission: "🚗 Car Trouble",
+            list: ["🛢️ Oil Change (Mechanic)", "🛠️ Wrench (Hardware)", "🗺️ Map (Newsstand)", "☕ Espresso (Cafe)"],
+            budget: 90
+        },
+        {
+            mission: "⛺ Camping Trip",
+            list: ["🥩 Dried Meat (Butcher)", "🔦 Flashlight (Hardware)", "🧣 Warm Scarf (Clothing)", "💊 Bug Spray (Pharmacy)"],
+            budget: 70
+        },
+        {
+            mission: "🚌 School Field Trip",
+            list: ["🥪 Sandwich (Cafe)", "🍎 Apple (Grocer)", "👕 School T-Shirt (Clothing)", "🎒 Backpack (Clothing)"],
+            budget: 45
+        },
+        {
+            mission: "🏔️ Hiking Adventure",
+            list: ["👒 Sun Hat (Clothing)", "🍫 Energy Bar (Newsstand)", "🗺️ Trail Map (Newsstand)", "💧 Water Bottle (Grocer)"],
+            budget: 40
+        },
+
+        // --- RANDOM / FUN ---
+        {
+            mission: "🕵️ Private Detective",
+            list: ["📰 Newspaper (Newsstand)", "🕶️ Dark Glasses (Clothing)", "🍩 Donut (Baker)", "☕ Black Coffee (Cafe)"],
+            budget: 50
+        },
+        {
+            mission: "🐶 New Puppy",
+            list: ["🍖 Bones (Butcher)", "🧹 Cleaning Supplies (Hardware)", "🎾 Tennis Ball (Newsstand)", "📸 Camera Film (Pharmacy)"],
+            budget: 60
+        },
+        {
+            mission: "🧟 Zombie Apocalypse",
+            list: ["🔨 Hammer (Hardware)", "🥫 Canned Food (Grocer)", "💊 Antibiotics (Pharmacy)", "👢 Sturdy Boots (Clothing)"],
+            budget: 100
         }
     ];
 
@@ -326,4 +410,5 @@
 </script>
 
 </body>
+
 </html>
